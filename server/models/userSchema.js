@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
         minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
         maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"]
     },
-    cnic:{
+    nic:{
         type: String,
         required: true, 
         minLength: [13, "CNIC Number Must Contain Exact 13 Digits!"],
@@ -42,9 +42,9 @@ const userSchema = new mongoose.Schema({
     },
     password:{
         type: String,
-        minLength: ["11, Password Must Contain Atleast 11 Characters!"],
+        minLength: [8, "Password Must Contain Atleast 8 Characters!"],
         required: true,
-        select: false
+        // select: false
     },
     role:{
         type: String,

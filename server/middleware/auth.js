@@ -1,10 +1,10 @@
 import { User } from "../models/userSchema.js";
-import { catchAsyncErrors } from "./catchAsyncErrors.js";
-import ErrorHandler from "./error.js";
+import { catchAsyncError } from "./catchAsyncErrors.js";
+import ErrorHandler from "./errorMiddleware.js";
 import jwt from "jsonwebtoken";
 
 // Middleware to authenticate dashboard users
-export const isAdminAuthenticated = catchAsyncErrors(
+export const isAdminAuthenticated = catchAsyncError(
   async (req, res, next) => {
     const token = req.cookies.adminToken;
     if (!token) {
@@ -24,7 +24,7 @@ export const isAdminAuthenticated = catchAsyncErrors(
 );
 
 // Middleware to authenticate frontend users
-export const isPatientAuthenticated = catchAsyncErrors(
+export const isPatientAuthenticated = catchAsyncError(
   async (req, res, next) => {
     const token = req.cookies.patientToken;
     if (!token) {

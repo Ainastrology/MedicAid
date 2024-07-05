@@ -8,7 +8,7 @@ import {
 import {
   isAdminAuthenticated,
   isPatientAuthenticated,
-} from "../middlewares/auth.js";
+} from "../middleware/auth.js";
 
 const router = express.Router();
 

@@ -1,9 +1,9 @@
-import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
-import ErrorHandler from "../middlewares/error.js";
+import { catchAsyncError } from "../middleware/catchAsyncErrors.js";
+import ErrorHandler from "../middleware/errorMiddleware.js";
 import { Appointment } from "../models/appointmentSchema.js";
 import { User } from "../models/userSchema.js";
 
-export const postAppointment = catchAsyncErrors(async (req, res, next) => {
+export const postAppointment = catchAsyncError(async (req, res, next) => {
   const {
     firstName,
     lastName,
@@ -81,14 +81,14 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-export const getAllAppointments = catchAsyncErrors(async (req, res, next) => {
+export const getAllAppointments = catchAsyncError(async (req, res, next) => {
   const appointments = await Appointment.find();
   res.status(200).json({
     success: true,
     appointments,
   });
 });
-export const updateAppointmentStatus = catchAsyncErrors(
+export const updateAppointmentStatus = catchAsyncError(
   async (req, res, next) => {
     const { id } = req.params;
     let appointment = await Appointment.findById(id);
@@ -106,7 +106,7 @@ export const updateAppointmentStatus = catchAsyncErrors(
     });
   }
 );
-export const deleteAppointment = catchAsyncErrors(async (req, res, next) => {
+export const deleteAppointment = catchAsyncError(async (req, res, next) => {
   const { id } = req.params;
   const appointment = await Appointment.findById(id);
   if (!appointment) {
@@ -114,7 +114,7 @@ export const deleteAppointment = catchAsyncErrors(async (req, res, next) => {
   }
   await appointment.deleteOne();
   res.status(200).json({
-    success: true,
+    success: true, 
     message: "Appointment Deleted!",
   });
 });
