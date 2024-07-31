@@ -12,7 +12,7 @@ export const isAdminAuthenticated = catchAsyncError(
         new ErrorHandler("Dashboard User is not authenticated!", 400)
       );
     }
-    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);      //authorization process that is a step further for authentication
     req.user = await User.findById(decoded.id);
     if (req.user.role !== "Admin") {
       return next(

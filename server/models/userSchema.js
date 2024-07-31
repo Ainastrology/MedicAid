@@ -44,7 +44,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         minLength: [8, "Password Must Contain Atleast 8 Characters!"],
         required: true,
-        // select: false
+        select: false
     },
     role:{
         type: String,
@@ -76,6 +76,5 @@ userSchema.methods.generateJsonWebToken = function() {
         expiresIn: process.env.JWT_EXPIRES
     });
 };
-
 
 export const User = mongoose.model("User", userSchema);
