@@ -5,6 +5,8 @@ import 'swiper/swiper-bundle.css';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import './../index.css';
 
+
+
 import loginImage from './../Assets/Icons/medical-5459654_1280 1.png'; // Adjust the path as necessary
 import logoImage from './../Assets/Logo-MedicAid.png';
 import slide_image_1 from './../Assets/Fdoc1.png';
@@ -13,6 +15,7 @@ import slide_image_3 from './../Assets/Fdoc4.png';
 import slide_image_4 from './../Assets/Mdoc2.png';
 import slide_image_5 from './../Assets/Mdoc3.png';
 import slide_image_6 from './../Assets/Mdoc4.png';
+
 
 const LoginPage = () => {
   return (
@@ -33,14 +36,14 @@ const LoginPage = () => {
           <div className="tagline-container">
             
             <ul className="dynamic-text">
+              {/* <li>
+                <span>Have control over your health anytime, anywhere</span>
+              </li> */}
               <li>
                 <span>Enter your credentials <br />to stay informed,</span>
               </li>
               <li>
-                <span>Have control over your health anytime, anywhere</span>
-              </li>
-              <li>
-                <span>Expert Care, Anywhere Your Health,<br /> We’ll Repair.</span>
+                <span>Expert Care, Anywhere Your Health, We’ll Repair.</span>
               </li>
               
             </ul>
@@ -48,7 +51,7 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-
+      
       <div className="login-container">
         <h1 className="login-title">Welcome Back!</h1>
         <p className="login-subtitle">Please log in to your account</p>
@@ -61,6 +64,7 @@ const LoginPage = () => {
             <label htmlFor="password">Password</label>
             <input type="password" id="password" placeholder="Enter your password" required />
           </div>
+          
           <button type="submit" className="login-button">Login</button>
           <div className="login-footer">
             <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
@@ -83,7 +87,7 @@ const LoginPage = () => {
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 100,
+            depth: 50,
             modifier: 2.5,
           }}
           pagination={{ el: '.swiper-pagination', clickable: true }}

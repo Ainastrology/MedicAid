@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.13.0",
+    "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
@@ -11,10 +11,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.20.1",
+    "google-map-react": "^2.2.1",
+    "mapbox-gl": "^3.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-map-gl": "^7.1.7",
     "react-router-dom": "^6.26.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "swiper": "^11.1.9",
     "web-vitals": "^2.1.4"
   },
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "html-loader": "^5.1.0"
+    "html-loader": "^5.1.0",
+    "typescript": "^4.9.5"
   }
 }

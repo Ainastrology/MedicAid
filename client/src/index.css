@@ -30,13 +30,13 @@
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
-  color: #333;
+  color: #fff;
 }
 
 .logo-pitch {
   margin-top: 0.5rem;
   font-size: 1rem;
-  color: #333;
+  color: #fff;
   line-height: 1.5;
 }
 
@@ -78,8 +78,8 @@
 }
 
 @keyframes slideUp {
-  0%, 20% { opacity: 0; transform: translateY(100%); }
-  25%, 75% { opacity: 1; transform: translateY(0%); }
+  /* 0%, 20% { opacity: 0; transform: translateY(100%); } */
+  25%, 75% { opacity: 1; transform: translateY(100%); }
   80%, 100% { opacity: 1; transform: translateY(-100%); }
 }
 
@@ -90,11 +90,6 @@
 .dynamic-text li:nth-child(2) {
   animation-delay: 2s; /* Start after the first item */
 }
-
-.dynamic-text li:nth-child(3) {
-  animation-delay: 4s; /* Start after the second item */
-}
-
 
 /* Container for the login box */
 .login-container {
@@ -218,16 +213,16 @@
 
 /* Swiper Slide adjustments */
 .swiper-slide {
-  width: auto; /* Automatically adjust based on container */
-  height: auto; /* Adjust height automatically */
+  width: 100%; /* Automatically adjust based on container */
+  height: 60%; /* Adjust height automatically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: 10%;
+  width: 200px;  /* Set the desired width */
+  height: auto;  /* Adjust height automatically to maintain aspect ratio */
   border-radius: 1rem;
   object-fit: cover;
 }
