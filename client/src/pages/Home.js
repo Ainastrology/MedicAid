@@ -40,3 +40,33 @@
 //   };
 
 // export default LoginButton;
+
+
+
+
+
+
+import React from 'react';
+import Lottie from 'lottie-react';
+import animationData from '../Hello2.json';  // Ensure this file is in the public directory
+
+const HomePage = () => {
+  return (
+    <div className="home-page">
+      <h1>Welcome to MedicAid Image Analyzer🩺</h1>
+      <p>From Query to Cure, We Make Health Secure</p>
+      <Lottie 
+        options={{
+          loop: true,
+          autoplay: true, 
+          animationData: animationData
+        }}
+        height={190}
+        width="100%"
+      />
+    </div>
+  );
+};
+
+export default HomePage;
+

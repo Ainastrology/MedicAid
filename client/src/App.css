@@ -1,0 +1,28 @@
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c4ebe4;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .home-page, .medicaid-ai-page {
+    text-align: center;
+    padding: 20px;
+  }

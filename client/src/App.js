@@ -30,3 +30,40 @@ function App() {
 };
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+// import HomePage from './pages/Home';
+// import MedicAidAIPage from './pages/MedAI';
+// import './App.css';  // Custom CSS for your styles
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <div className="App">
+//         <nav>
+//           <ul>
+//             <li><Link to="/">Home</Link></li>
+//             <li><Link to="/medicaid-ai">MedicAid AI</Link></li>
+//           </ul>
+//         </nav>
+//         <Routes>
+//           <Route path="/" element={<HomePage />} />
+//           <Route path="/medicaid-ai" element={<MedicAidAIPage />} />
+//         </Routes>
+//       </div>
+//     </Router>
+//   );
+// };
+
+// export default App;
